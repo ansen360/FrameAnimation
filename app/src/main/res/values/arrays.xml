@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--通过FrameAnimation播放的八十张图片-->
+    <array name="c">
+
+        <item>@mipmap/c_1</item>
+        <item>@mipmap/c_2</item>
+        <item>@mipmap/c_3</item>
+        <item>@mipmap/c_4</item>
+        <item>@mipmap/c_5</item>
+        <item>@mipmap/c_6</item>
+        <item>@mipmap/c_7</item>
+        <item>@mipmap/c_8</item>
+        <item>@mipmap/c_9</item>
+        <item>@mipmap/c_10</item>
+        <item>@mipmap/c_11</item>
+        <item>@mipmap/c_12</item>
+        <item>@mipmap/c_13</item>
+        <item>@mipmap/c_14</item>
+        <item>@mipmap/c_15</item>
+        <item>@mipmap/c_16</item>
+        <item>@mipmap/c_17</item>
+        <item>@mipmap/c_18</item>
+        <item>@mipmap/c_19</item>
+        <item>@mipmap/c_20</item>
+
+        <item>@mipmap/down_1</item>
+        <item>@mipmap/down_2</item>
+        <item>@mipmap/down_3</item>
+        <item>@mipmap/down_4</item>
+        <item>@mipmap/down_5</item>
+        <item>@mipmap/down_6</item>
+        <item>@mipmap/down_7</item>
+        <item>@mipmap/down_8</item>
+        <item>@mipmap/down_9</item>
+        <item>@mipmap/down_10</item>
+        <item>@mipmap/down_11</item>
+        <item>@mipmap/down_12</item>
+        <item>@mipmap/down_13</item>
+        <item>@mipmap/down_14</item>
+        <item>@mipmap/down_15</item>
+        <item>@mipmap/down_16</item>
+        <item>@mipmap/down_17</item>
+        <item>@mipmap/down_18</item>
+        <item>@mipmap/down_19</item>
+        <item>@mipmap/down_20</item>
+
+        <item>@mipmap/e_1</item>
+        <item>@mipmap/e_2</item>
+        <item>@mipmap/e_3</item>
+        <item>@mipmap/e_4</item>
+        <item>@mipmap/e_5</item>
+        <item>@mipmap/e_6</item>
+        <item>@mipmap/e_7</item>
+        <item>@mipmap/e_8</item>
+        <item>@mipmap/e_9</item>
+        <item>@mipmap/e_10</item>
+        <item>@mipmap/e_11</item>
+        <item>@mipmap/e_12</item>
+        <item>@mipmap/e_13</item>
+        <item>@mipmap/e_14</item>
+        <item>@mipmap/e_15</item>
+        <item>@mipmap/e_16</item>
+        <item>@mipmap/e_17</item>
+        <item>@mipmap/e_18</item>
+        <item>@mipmap/e_19</item>
+        <item>@mipmap/e_20</item>
+
+        <item>@mipmap/circle_1</item>
+        <item>@mipmap/circle_2</item>
+        <item>@mipmap/circle_3</item>
+        <item>@mipmap/circle_4</item>
+        <item>@mipmap/circle_5</item>
+        <item>@mipmap/circle_6</item>
+        <item>@mipmap/circle_7</item>
+        <item>@mipmap/circle_8</item>
+        <item>@mipmap/circle_9</item>
+        <item>@mipmap/circle_10</item>
+        <item>@mipmap/circle_11</item>
+        <item>@mipmap/circle_12</item>
+        <item>@mipmap/circle_13</item>
+        <item>@mipmap/circle_14</item>
+        <item>@mipmap/circle_15</item>
+        <item>@mipmap/circle_16</item>
+        <item>@mipmap/circle_17</item>
+        <item>@mipmap/circle_18</item>
+        <item>@mipmap/circle_19</item>
+        <item>@mipmap/circle_20</item>
+    </array>
+
+</resources>
