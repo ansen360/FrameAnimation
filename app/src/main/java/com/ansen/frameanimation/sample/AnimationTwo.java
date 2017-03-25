@@ -50,6 +50,9 @@ public class AnimationTwo extends Activity {
             }
         });
 
+
+//        每次动画播完延迟4000毫秒再次播放
+//        FrameAnimation frameAnimation = new FrameAnimation(image, getRes(), 50, 4000);
     }
 
     private int[] getRes() {

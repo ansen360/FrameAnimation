@@ -117,12 +117,13 @@ public class FrameAnimation {
                     if (mAnimationListener != null) {
                         mAnimationListener.onAnimationRepeat();
                     }
+                    mNext = true;
                     playByDurationsAndDelay(0);
                 } else {
                     playByDurationsAndDelay(i + 1);
                 }
             }
-        }, i == mLastFrame && mDelay > 0 ? mDelay : mDurations[i]);
+        }, mNext && mDelay > 0 ? mDelay : mDurations[i]);
 
     }
 
@@ -141,8 +142,8 @@ public class FrameAnimation {
                 if (i == mLastFrame) {
                     if (mAnimationListener != null) {
                         mAnimationListener.onAnimationRepeat();
-                        mNext = true;
                     }
+                    mNext = true;
                     playAndDelay(0);
                 } else {
                     playAndDelay(i + 1);
