@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/ansen360/FrameAnimation.svg)](https://jitpack.io/#ansen360/FrameAnimation)
+
 **2015年项目接到一个需求,实现一个向导动画,这个动画一共六十张图片,当时使用的是全志A33的开发(512的内存),通过使用Android的动画集实现,效果特别卡顿,然后想到这种方式来实现,效果很流畅.然后写成开一个开源项目供大家参考**
 
 **对比以下两种方式实现帧动画,使用相同的80张280x280的png图片执行动画,资源占用情况对比:**
@@ -71,6 +73,7 @@ http://oma689k8f.bkt.clouddn.com/note/3/4.gif
         animationDrawable.start();
 ```
 **动画启动系统资源占用情况如下:**
+
 ![](http://oma689k8f.bkt.clouddn.com/note/3/1.png)
 手动触发GC,内存占用几乎没改变
 
@@ -131,6 +134,7 @@ http://oma689k8f.bkt.clouddn.com/note/3/4.gif
 ```
 
 **动画启动系统资源占用情况如下:**
+
 ![](http://oma689k8f.bkt.clouddn.com/note/3/2.png)
 手动触发GC,内存占用有明显变化
 
