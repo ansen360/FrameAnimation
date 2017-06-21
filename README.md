@@ -1,4 +1,6 @@
 [![](https://jitpack.io/v/ansen360/FrameAnimation.svg)](https://jitpack.io/#ansen360/FrameAnimation)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/68590d8a37394b2ca7298c5ddadd2310)](https://www.codacy.com/app/ansen360/FrameAnimation?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ansen360/FrameAnimation&amp;utm_campaign=Badge_Grade)
+[![](https://img.shields.io/badge/author-ansen-ff69b4.svg)](http://blog.csdn.net/qq_25804863?viewmode=contents)
 
 **2015年项目接到一个需求,实现一个向导动画,这个动画一共六十张图片,当时使用的是全志A33的开发(512的内存),通过使用Android的动画集实现,效果特别卡顿,然后想到这种方式来实现,效果很流畅.然后写成开一个开源项目供大家参考**
 
