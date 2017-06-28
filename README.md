@@ -21,7 +21,7 @@
 **https://github.com/ansen360/FrameAnimation**
 
 #### Sample效果:
-![](http://oma689k8f.bkt.clouddn.com/note/3/4.gif)
+![](https://github.com/ansen360/FrameAnimation/blob/master/1.gif)
 http://oma689k8f.bkt.clouddn.com/note/3/4.gif
 #### Android动画集实现帧动画
 - 1 在drawable目录下创建动画集animalist.xml
