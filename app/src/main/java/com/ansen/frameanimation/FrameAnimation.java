@@ -321,6 +321,8 @@ public class FrameAnimation {
                 case SELECTED_D:
                     play(mCurrentFrame);
                     break;
+                default:
+                    break;
             }
         }
     }
