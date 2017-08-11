@@ -5,7 +5,7 @@ import android.widget.ImageView;
 /**
  * Created by Ansen on 2015/5/14 23:30.
  *
- * @E-mail: tomorrow_p@163.com
+ * @E-mail: ansen360@126.com
  * @Blog: http://blog.csdn.net/qq_25804863
  * @Github: https://github.com/ansen360
  * @PROJECT_NAME: FrameAnimation
@@ -41,12 +41,26 @@ public class FrameAnimation {
 
     private boolean mNext;
 
+    private boolean mPause;
+
+    private int mCurrentSelect;
+
+    private int mCurrentFrame;
+
+    private static final int SELECTED_A = 1;
+
+    private static final int SELECTED_B = 2;
+
+    private static final int SELECTED_C = 3;
+
+    private static final int SELECTED_D = 4;
+
 
     /**
      * @param iv       播放动画的控件
      * @param frameRes 播放的图片数组
-     * @param duration 播放的时间间隔
-     * @param isRepeat 是否重复播放
+     * @param duration 每帧动画的播放间隔(毫秒)
+     * @param isRepeat 是否循环播放
      */
     public FrameAnimation(ImageView iv, int[] frameRes, int duration, boolean isRepeat) {
         this.mImageView = iv;
@@ -60,8 +74,8 @@ public class FrameAnimation {
     /**
      * @param iv        播放动画的控件
      * @param frameRess 播放的图片数组
-     * @param durations 播放的时间间隔(每张图片的播放时间间隔)
-     * @param isRepeat  是否重复播放
+     * @param durations 每帧动画的播放间隔(毫秒)
+     * @param isRepeat  是否循环播放
      */
     public FrameAnimation(ImageView iv, int[] frameRess, int[] durations, boolean isRepeat) {
         this.mImageView = iv;
@@ -73,10 +87,12 @@ public class FrameAnimation {
     }
 
     /**
+     * 循环播放动画
+     *
      * @param iv        播放动画的控件
      * @param frameRess 播放的图片数组
-     * @param duration  播放的时间间隔(每张图片的播放时间间隔)
-     * @param delay     下一遍动画播放的延迟时间
+     * @param duration  每帧动画的播放间隔(毫秒)
+     * @param delay     循环播放的时间间隔
      */
     public FrameAnimation(ImageView iv, int[] frameRess, int duration, int delay) {
         this.mImageView = iv;
@@ -88,10 +104,12 @@ public class FrameAnimation {
     }
 
     /**
+     * 循环播放动画
+     *
      * @param iv        播放动画的控件
      * @param frameRess 播放的图片数组
-     * @param durations 播放的时间间隔(每张图片的播放时间间隔)
-     * @param delay     下一遍动画播放的延迟时间
+     * @param durations 每帧动画的播放间隔(毫秒)
+     * @param delay     循环播放的时间间隔
      */
     public FrameAnimation(ImageView iv, int[] frameRess, int[] durations, int delay) {
         this.mImageView = iv;
@@ -107,6 +125,11 @@ public class FrameAnimation {
 
             @Override
             public void run() {
+                if (mPause) {   // 暂停和播放需求
+                    mCurrentSelect = SELECTED_A;
+                    mCurrentFrame = i;
+                    return;
+                }
                 if (0 == i) {
                     if (mAnimationListener != null) {
                         mAnimationListener.onAnimationStart();
@@ -132,6 +155,14 @@ public class FrameAnimation {
 
             @Override
             public void run() {
+                if (mPause) {
+                    if (mPause) {
+                        mCurrentSelect = SELECTED_B;
+                        mCurrentFrame = i;
+                        return;
+                    }
+                    return;
+                }
                 mNext = false;
                 if (0 == i) {
                     if (mAnimationListener != null) {
@@ -158,6 +189,14 @@ public class FrameAnimation {
 
             @Override
             public void run() {
+                if (mPause) {
+                    if (mPause) {
+                        mCurrentSelect = SELECTED_C;
+                        mCurrentFrame = i;
+                        return;
+                    }
+                    return;
+                }
                 if (0 == i) {
                     if (mAnimationListener != null) {
                         mAnimationListener.onAnimationStart();
@@ -189,6 +228,14 @@ public class FrameAnimation {
 
             @Override
             public void run() {
+                if (mPause) {
+                    if (mPause) {
+                        mCurrentSelect = SELECTED_D;
+                        mCurrentFrame = i;
+                        return;
+                    }
+                    return;
+                }
                 if (0 == i) {
                     if (mAnimationListener != null) {
                         mAnimationListener.onAnimationStart();
@@ -244,6 +291,38 @@ public class FrameAnimation {
      */
     public void setAnimationListener(AnimationListener listener) {
         this.mAnimationListener = listener;
+    }
+
+    public void release() {
+        pauseAnimation();
+    }
+
+    public void pauseAnimation() {
+        this.mPause = true;
+    }
+
+    public boolean isPause() {
+        return this.mPause;
+    }
+
+    public void restartAnimation() {
+        if (mPause) {
+            mPause = false;
+            switch (mCurrentSelect) {
+                case SELECTED_A:
+                    playByDurationsAndDelay(mCurrentFrame);
+                    break;
+                case SELECTED_B:
+                    playAndDelay(mCurrentFrame);
+                    break;
+                case SELECTED_C:
+                    playByDurations(mCurrentFrame);
+                    break;
+                case SELECTED_D:
+                    play(mCurrentFrame);
+                    break;
+            }
+        }
     }
 
 }
