@@ -12,18 +12,16 @@
 
 **FrameAnimation实现: 内存占用4M左右**
 
+
 两者CUP占用都比较低,可忽略
 
-#### 博客地址:
-**http://blog.csdn.net/qq_25804863/article/details/65634864**
-
-#### 代码地址:
+**代码下载:**
 **https://github.com/ansen360/FrameAnimation**
 
-#### Sample效果:
-![](https://github.com/ansen360/FrameAnimation/blob/master/1.gif)
-
-#### Android动画集实现帧动画
+##### Sample效果:
+![](http://oma689k8f.bkt.clouddn.com/note/3/4.gif)
+http://oma689k8f.bkt.clouddn.com/note/3/4.gif
+##### 一、Android动画集实现帧动画
 - 1 在drawable目录下创建动画集animalist.xml
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -81,7 +79,7 @@
 
 
 
-#### FrameAnimation实现帧动画
+##### 二、FrameAnimation实现帧动画
 - 1 定义需要播放动画的资源文件;在arrays文件中定义资源,或者在代码中定义
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -140,3 +138,4 @@
 ![](http://oma689k8f.bkt.clouddn.com/note/3/2.png)
 手动触发GC,内存占用有明显变化
 
+[博客地址](http://blog.csdn.net/qq_25804863/article/details/65634864)
