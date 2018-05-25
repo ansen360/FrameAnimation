@@ -6,12 +6,11 @@
 
 **对比以下两种方式实现帧动画,使用相同的80张280x280的png图片执行动画,资源占用情况对比:**
 
-![](http://oma689k8f.bkt.clouddn.com/note/3/3.png)
+![](http://oma689k8f.bkt.clouddn.com/3_3.png)
 
 **Android动画集实现: 内存占用56M左右**
 
 **FrameAnimation实现: 内存占用4M左右**
-
 
 两者CUP占用都比较低,可忽略
 
@@ -19,8 +18,8 @@
 **https://github.com/ansen360/FrameAnimation**
 
 ##### Sample效果:
-![](http://oma689k8f.bkt.clouddn.com/note/3/4.gif)
-http://oma689k8f.bkt.clouddn.com/note/3/4.gif
+![](http://oma689k8f.bkt.clouddn.com/3_4_frame_animation)
+
 ##### 一、Android动画集实现帧动画
 - 1 在drawable目录下创建动画集animalist.xml
 ```
@@ -74,10 +73,8 @@ http://oma689k8f.bkt.clouddn.com/note/3/4.gif
 ```
 **动画启动系统资源占用情况如下:**
 
-![](http://oma689k8f.bkt.clouddn.com/note/3/1.png)
+![](http://oma689k8f.bkt.clouddn.com/3_1.png)
 手动触发GC,内存占用几乎没改变
-
-
 
 ##### 二、FrameAnimation实现帧动画
 - 1 定义需要播放动画的资源文件;在arrays文件中定义资源,或者在代码中定义
@@ -135,7 +132,7 @@ http://oma689k8f.bkt.clouddn.com/note/3/4.gif
 
 **动画启动系统资源占用情况如下:**
 
-![](http://oma689k8f.bkt.clouddn.com/note/3/2.png)
+![](http://oma689k8f.bkt.clouddn.com/3_2.png)
 手动触发GC,内存占用有明显变化
 
 [博客地址](http://blog.csdn.net/qq_25804863/article/details/65634864)
